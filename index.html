@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islam University</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="logotip.jpeg">
+    <!-- <link rel="stylesheet" href="glavnaya.js"> -->
+</head>
+<body>
+  <div class="div-container">
+    <div class="div-saytnomi">
+      <h1>Imam Matrudi</h1>
+      <!-- <img src="logotip.jpeg" alt="logo"> -->
+    </div>
+    <div class="div-saytnomi2">
+      <h2>Islam University</h2>
+      <img src="logotip.jpeg" alt="">
+    </div>
+    <div class="menu-container">
+      <div class="menu-items" id="menu">
+        <div class="item"><a href="index.html">Пункт 1</a></div>
+        <div class="item"><a target="_blank" href="2chi.html">Пункт 2</a></div>
+        <div class="item"><a target="_blank" href="">Пункт 3</a></div>
+        <div class="item"><a target="_blank" href="">Пункт 4</a></div>
+        <!-- <div class="item">Пункт 5</div> -->
+        <!-- <div class="item">Пункт 6</div> -->
+        <!-- <div class="item">Пункт 7</div> -->
+        <!-- <div class="item">Пункт 8</div> -->
+          <script>
+              const slider = document.getElementById('menu');
+            let isDown = false;
+            let startX;
+            let scrollLeft;
+
+            slider.addEventListener('mousedown', (e) => {
+              isDown = true;
+            slider.classList.add('active');
+              startX = e.pageX - slider.offsetLeft;
+              scrollLeft = slider.scrollLeft;
+            });
+
+            slider.addEventListener('mouseleave', () => {
+              isDown = false;
+            });
+
+            slider.addEventListener('mouseup', () => {
+              isDown = false;
+            });
+
+            slider.addEventListener('mousemove', (e) => {
+              if (!isDown) return;
+              e.preventDefault();
+            const x = e.pageX - slider.offsetLeft;
+            const walk = (x - startX) * 2; // Множитель скорости прокрутки
+            slider.scrollLeft = scrollLeft - walk;
+            });
+          </script>
+        
+      </div>
+
+    </div>
+    <div class="sahifa">
+        
+      <div class="slaydli-surat">
+        <img class="mySlides" src="1.jpg" style="width: 290px; height: 220px;">
+        <img class="mySlides" src="2.jpg" style="width:290px" height="220px">
+        <img class="mySlides" src="3.jpg" style="width:290px" height="220px">
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente illum, molestias placeat facere quo assumenda officiis velit, iste reprehenderit excepturi eos perferendis recusandae illo exercitationem veritatis aut est minus quis!</h3>
+      </div>
+      <br><hr>
+      <script>
+      var myIndex = 0;
+      carousel();
+      
+      function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 2000); // Change image every 2 seconds
+      }
+      </script>
+
+        <!--  -->
+        <div class="div-malumot1">
+          <img src="1.jpg" alt="">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quaerat eligendi placeat, quas dignissimos sequi nihil nisi soluta! Architecto, et? Quidem, nobis modi nisi ad dolores quibusdam mollitia quis dolorum?</h3>
+        </div>
+        <br><hr>
+        <div class="div-malumot2">
+          <img src="2.jpg" alt="">
+          <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aspernatur quos dicta vel eveniet maxime dolorem perspiciatis dignissimos. Enim corporis distinctio alias voluptates. Culpa aliquid optio accusamus assumenda! Aliquam, ut?</h3>
+        </div>
+        <br><hr>
+        <div class="div-malumot3">
+          <img src="3.jpg" alt="">
+          <h3>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, modi laudantium cum ratione repellat eveniet expedita quaerat! Facere adipisci aliquid mollitia odit, quam repellat dolor ipsa, a eum doloribus laboriosam voluptatem. Illo repellat magni reiciendis eius natus, quas tempore doloribus aperiam a impedit, sequi assumenda omnis esse, nobis ut expedita. adipisicing elit. Laborum asperiores inventore reiciendis quibusdam, quos placeat commodi sint soluta repudiandae voluptate voluptatum? Aspernatur harum incidunt soluta perferendis numquam aliquam porro placeat?</h3>
+        </div>
+        <br><hr>
+    </div>
+
+    <div id="tugash-qismi">
+        <h3>Imam MATRUDI ISLAM University</h3>
+        <i>official site</i>
+    </div>
+
+  </div>
+</body>
+
+</html>
